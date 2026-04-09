@@ -1,4 +1,4 @@
-package Semana1.Contador;
+package Semana1.Contador.contador;
 
 public class Contador {
     //Ejercicio 1:

@@ -1,4 +1,4 @@
-package Semana1.Contador;
+package Semana1.Contador.contador;
 
 public class Main {
     public static void main(String[] args) {
