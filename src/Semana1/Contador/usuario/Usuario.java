@@ -26,6 +26,9 @@ public class Usuario {
     }
 
     public static int getTotalUsuarios() {
+
+
         return totalUsuarios;
     }
+
 }
