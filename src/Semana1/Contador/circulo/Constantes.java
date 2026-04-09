@@ -9,7 +9,7 @@ public class Constantes {
    //- Tiene que tener un método double areaCirculo(double radio) que nos devuelva el área - usando el valor de PI de la otra clase.
    //Desde un main, crea varios círculos y calcula sus áreas.
 
-    public static final double pi=3.1416;
+    public static final double PI=3.1416;
 
 
 }
