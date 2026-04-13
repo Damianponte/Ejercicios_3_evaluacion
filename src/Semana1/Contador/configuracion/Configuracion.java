@@ -10,4 +10,15 @@ public class Configuracion {
     //Desde una clase con main, haz un método "saludar(String nombre)" que imprima "Hola nombre" si el idioma de la configuración es ES,
     // y "Hello nombre" si el idioma de la configuración es "EN".
     // Después, en el método "main", prueba a imprimir tras varias configuraciones.
+
+
+
+    private static String idioma="ES";
+
+    public static void cambiarIdioma(String nuevoIdioma){
+
+
+        
+    }
+
 }
