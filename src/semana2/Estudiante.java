@@ -1,5 +1,6 @@
 package semana2;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Estudiante {
@@ -35,33 +36,28 @@ public class Estudiante {
     private Set<String> aprobadas;
     private Set<String> pendientes;
 
-    public void setPendientes(Set<String> pendientes) {
-        this.pendientes = pendientes;
-    }
 
-    public void setAprobadas(Set<String> aprobadas) {
-        this.aprobadas = aprobadas;
-    }
 
-    public Estudiante(String nombre, Set<String> aprobadas, Set<String> pendientes) {
+    public Estudiante(String nombre) {
         this.nombre = nombre;
-        this.aprobadas = aprobadas;
-        this.pendientes = pendientes;
+        this.aprobadas = new HashSet<String>();
+        this.pendientes = new HashSet<String>();
     }
 
     public void cursarAsignatura(String asignatura, boolean aprobada){
         if(aprobadas.contains(asignatura)){
+            aprobadas.add(asignatura);
             System.out.println("la asignatura ya esta aprobada");
 
-            if (aprobada){
-                aprobadas.add(asignatura);
-                pendientes.remove(asignatura);
-            }
+
 
         }else{
             pendientes.add(asignatura);
+            if (aprobada){
 
-
+                aprobadas.add(asignatura);
+                pendientes.remove(asignatura);
+            }
         }
     }
 
@@ -76,15 +72,20 @@ public class Estudiante {
     }
 
     public Set<String>getTodas(){
+
+
    return getTodas();
     }
 
     public void mostrarEstudiante(){
         System.out.println(
-                "estudiante" + nombre
-                + "aprobadas: " + aprobadas
-                + " pendientes: " + pendientes
+                 nombre
+                + " aprobadas: " + getAprobadas()
+                + " pendientes: " + getPendientes()
         );
+
+
+
     }
 
 
