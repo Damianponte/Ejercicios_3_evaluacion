@@ -27,20 +27,27 @@ public class Estudiante {
    //- Elige a uno de los dos estudiantes. Obtén una asignatura que haya suspendido. Apruébasela.
     // Imprime de nuevo su listado de asignaturas aprobadas.
 
+    public String getNombre() {
+        return nombre;
+    }
+
     private String nombre;
     private Set<String> aprobadas;
     private Set<String> pendientes;
+
+    public void setPendientes(Set<String> pendientes) {
+        this.pendientes = pendientes;
+    }
+
+    public void setAprobadas(Set<String> aprobadas) {
+        this.aprobadas = aprobadas;
+    }
 
     public Estudiante(String nombre, Set<String> aprobadas, Set<String> pendientes) {
         this.nombre = nombre;
         this.aprobadas = aprobadas;
         this.pendientes = pendientes;
     }
-//Añade un método "cursarAsignatura(String asignatura, boolean aprobada)". Este método:
-    //- Si la asignatura ya está en asignaturas aprobadas, imprime "Ya ha cursado esa asignatura".
-    //- En caso contrario, tiene que poner la asignatura en "aprobadas" o en "pendientes" dependiendo del parámetro que se le pasa por entrada.
-    // **Ten en cuenta que si ya la tenía en asignaturas pendientes, y ahora la aprueba,
-    // también tienes que eliminarla de asignaturas pendientes - ahora está aprobada**
 
     public void cursarAsignatura(String asignatura, boolean aprobada){
         if(aprobadas.contains(asignatura)){
@@ -57,6 +64,30 @@ public class Estudiante {
 
         }
     }
+
+
+
+    public Set<String> getAprobadas() {
+        return aprobadas;
+    }
+
+    public Set<String> getPendientes() {
+        return pendientes;
+    }
+
+    public Set<String>getTodas(){
+   return getTodas();
+    }
+
+    public void mostrarEstudiante(){
+        System.out.println(
+                "estudiante" + nombre
+                + "aprobadas: " + aprobadas
+                + " pendientes: " + pendientes
+        );
+    }
+
+
 
 
 }
