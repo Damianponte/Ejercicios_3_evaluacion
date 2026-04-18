@@ -1,4 +1,4 @@
-package semana2;
+package semana2.Estudiante;
 
 import java.util.ArrayList;
 import java.util.List;
